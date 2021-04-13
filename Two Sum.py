@@ -1,3 +1,4 @@
+"""Solution 1"""
 class Solution:
     def twoSum(self, nums, target) :
         h = {}
@@ -8,6 +9,17 @@ class Solution:
             else:
                 return [h[n], i]
 
+"""Solution 2"""
+class Solution:
+    def twoSum(self, nums, target) :
+        complementMap = dict()
+        for i in range(len(nums)):
+            num = nums[i]
+            complement = target - num
+            if num in complementMap:
+                return [complementMap[num], i]
+            else:
+                complementMap[complement] = i
 
 """S=Solution()
    S.twoSum([2,7,11,15], 9)"""
