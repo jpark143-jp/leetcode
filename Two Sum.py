@@ -1,5 +1,5 @@
 class Solution:
-    def twoSum(self, nums: List[int], target: int) :
+    def twoSum(self, nums, target) :
         h = {}
         for i, num in enumerate(nums):
             n = target - num
@@ -9,4 +9,6 @@ class Solution:
                 return [h[n], i]
 
 
+"""S=Solution()
+   S.twoSum([2,7,11,15], 9)"""
 
